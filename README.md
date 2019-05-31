@@ -69,19 +69,20 @@ To enable "Debug mode" boot the Olimexino with UEXT-7 and UEXT-8 being connected
 * Pins D6 & D5 will be configured as PWM to output frequencies. Those can be measured again using the input pins (e.g. if you connect D5 with D0)
 * There is a serial debug terminal that can be used to tweak several settings without having to rebuild.
   send "h" followed by a newline to get a list of commands, which are: 
-  * p<uint>  - change prescaler for InputCapture (default: 100)
-  * F<float> - change frequency on test-signal from D5
-  * f<float> - change frequency on test-signal from D6
-  * i<uint>  - change input-filter value [IC1F] (-1) for input-captures (allowed: 1-16, default: 6) 
-  * c<uint>  - change input-filter Clock-division [CKD] (-1) for input-captures (allowed: 1-3, default: 1) 
-  * d        - disable debug GPIO-PINS (D5, D6 and A0-4)
-  * e        - enable debug GPIO-PINS (D5, D6 and A0-4) [A0-4 are used to visualize time spent in interrupts on an oscilluscope]
-  * u        - toggle USART debugging on/off
-  * w        - trigger a watchdog reset
-  * s        - execute a software reset
-  * r<uint>  - CAN report rate (default: 20 (ms))
-  * n        - Print information (uptime, reset-reason, error-counts)
-  * l        - Print license info
+  ```
+  p<uint>  - change prescaler for InputCapture (default: 100)
+  F<float> - change frequency on test-signal from D5
+  f<float> - change frequency on test-signal from D6
+  i<uint>  - change input-filter value [IC1F] (-1) for input-captures (allowed: 1-16, default: 6) 
+  c<uint>  - change input-filter Clock-division [CKD] (-1) for input-captures (allowed: 1-3, default: 1) 
+  d        - disable debug GPIO-PINS (D5, D6 and A0-4)
+  e        - enable debug GPIO-PINS (D5, D6 and A0-4) [A0-4 are used to visualize time spent in interrupts on an oscilluscope]
+  u        - toggle USART debugging on/off
+  w        - trigger a watchdog reset
+  s        - execute a software reset
+  r<uint>  - CAN report rate (default: 20 (ms))
+  n        - Print information (uptime, reset-reason, error-counts)
+  l        - Print license info ```
 
 ## Development / Building
 
